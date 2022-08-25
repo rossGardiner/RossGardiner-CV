@@ -2,15 +2,27 @@
 % -- XeLaTeX => PDF (BIBER)
 
 \documentclass[]{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing. 
-                                      % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
-%\setdefaultlanguage{spanish}
-%\sethyphenation[variant=spanish]{}{}  % Add words between the {} to avoid them to be cut 
-
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\hypersetup{
+    pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
+    linkbordercolor=red,       % color of internal links
+    citebordercolor=green,     % color of links to bibliography
+    filebordercolor=magenta,   % color of file links
+    urlbordercolor=graduatepurple% color of external links
+}
+\usepackage{array}
+\usepackage{booktabs} 
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
 
 \begin{document}
 
-\header{Ross Gardiner}
+\header{Ross Gardiner} % your name here
 \lastupdated
 
 %----------------------------------------------------------------------------------------
@@ -20,123 +32,212 @@
 \includegraphics[width=5cm]{g2-cropped}
 %
 \section{Contact}
-Mobile: \textbf{07719679958}
+\vspace{0.1cm}Mobile: \texttt{+447719679958}
 ~
-Email: \textbf{rossgardiner24@gmail.com}
+Email: \texttt{rossgardiner24@gmail.com}
 ~
-\href{https://github.com/rossGardiner}{GitHub} 
+GitHub: \url{https://github.com/rossGardiner}
 ~
-\href{https://www.linkedin.com/in/ross-g/}{LinkedIn}
+LinkedIn: \url{https://www.linkedin.com/in/ross-g/}
 ~ 
-\href{https://orcid.org/0000-0001-5633-1317}{Orcid}
-
+Orcid: \url{https://orcid.org/0000-0001-5633-1317}
 %
 
 \section{Programming Languages}
-Python, C++, C, Haskell, Java, C\#, \LaTeX, MATLAB, HTML/RST/MD
+Python, C++, C, Haskell, Java, C\#, \LaTeX, MATLAB, HTML/RST
 %
-\section{Technologies}
+\section{Recent Technologies}
 Linux, OpenCV, Tensorflow/Keras, NVIDIA~CUDA, MS .NET, Qt, Doxygen, Sphinx, PiCamera, Google~Test, Docker, Jenkins
 \section{Miscellaneous Skills}
-UK Driver's Licence, Video~and~Photo~Editing, Leadership, 
-Soldering/Electronics~Manufacture, Vehicle Mechanics
-%
-%
+UK Driver's Licence, Video~and~Photo~Editing,
+Electronics~Design/Manufacture, Vehicle Repair, Woodwork 
+\section{Awards/Recognition}
+Year in Industry Contribution to the Business Awards, Scottish Winner (2016)
+~
+Year in industry IETF Future Industry Leaders Awards Runner up innovation prize (2016)
+~
+Leonardo Employee Recognition Award (2019)
 \end{aside}
-%----------------------------------------------------------------------------------------
-% RESUMEN SECTION
-%----------------------------------------------------------------------------------------
-\vspace{0.2cm}
+  \vspace{-0.3cm}
+
 \section{About}
+  \vspace{-0.4cm}
+
+Enthusiastic \textbf{Electronics and Software Engineering graduate} with some relevant experience. I have a keen interest in applications of machine learning for climate justice, medicine and/or ecological good. Currently seeking roles with positive impact on people and planet wherein a strong foundation in research work and software engineering may be applied.
   \vspace{-0.2cm}
-Keen Electronics and Software Engineering graduate with an interest in applications of machine learning for climate justice, medicine or ecological good. I have a strong foundation in software engineering and research. Seeking roles in businesses and/or lab groups with positive impact on people and planet. 
-%----------------------------------------------------------------------------------------
-% EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\section{Employment History}
+  \vspace{-0.4cm}
+  
+\begin{entrylist}
+\entry
+  {\scalebox{.8}[1.0]{June 2021--Present}}
+  {DynAikon Ltd.}
+  {Entirely Online}
+  {\jobtitle{Software Developer \& Research Assistant}\\
+  Presently, I am working as the project lead on our software package, \href{https://dynaikon.com/trap-docs/user-docs.html}{DynAikonTrap}. This is a fully open source (hardware and software) camera trap with AI capability and integration with our \href{https://service.fastcat-cloud.org/api/spec}{web API} for observation logging. Our design is currently novel, using video encoding artefacts and convolutional neural networks to detect animal presence in a live video feed. Inner workings are explained in our \href{https://www.sciencedirect.com/science/article/pii/S1574954122001066}{recently published paper}, of which I am a co-author. 
+  \\
+  As project lead, I am involved not only in every aspect of code development but also with communication, product support and liaison with our funding consortium. I also produced my final-year MEng research project from work completed on DynAikonTrap: successfully halving the system power consumption, accelerating our CNN detectors via quantisation and adding AI capability to distinguish humans from animals. 
+  %Recently, I have been preparing for a workshop where I  introduce DynAikonTrap to a group of wildlife researchers at the Spanish National Research Council in Catalonia. We hope this will help the project gain traction and volunteers for the open source development effort.
+  \\
+  \textbf{Technologies currently in use: }
+  \begin{itemize}
+    \item \textbf{Python} programming language is used throughout while \textbf{Cython} is used for some real-time video processing aspects. \textbf{C/C++} is used for our video decoding library. 
+    \item \textbf{Sphinx} handles our automated documentation generation. A \textbf{GitLab CI-runner} compiles and publishes docs to our website via a \textbf{Docker} container. 
+    \item Deep learning and computer vision capabilities are provided through the \textbf{OpenCV} library and \textbf{TFLite} runtime. Model training has been undertaken using the \textbf{Tensorflow} object detection API.
+    \item As a hardware platform, we use the \textbf{Raspberry Pi} system and we package our software for compatibility with \textbf{Ubuntu/Linux} systems.
+    
+\end{itemize}
+}
+%------------------------------------------ ------
+\entry
+  {\scalebox{.8}[1.0]{June--Sept.  2020}}
+  {Imagination Technologies}
+  {Kings Langley, Watford}
+  {\jobtitle{Vision \& AI Research Intern}\\
+ I joined the Compiler Team as a Research Intern. My given task was to review metrics for quantifying neural network inference quality at different weight quantisation degrees. In particular, I looked at generative adversarial networks (GANs) and created a \textbf{Python} integration test running on a \textbf{Jenkins} server. I put these metrics to use as part of an existing fault checking pipeline for compiler releases. I learned to work in an \textbf{Agile} team, participating in regular stand-ups and produced detailed reports on chosen metrics from the available literature. 
+ }
+\entry
+  {\scalebox{.8}[1.0]{Aug. 2018--June 2019}}
+  {Leonardo UK Ltd.}
+  {Crewe Road, Edinburgh}
+  {\jobtitle{Undergrad Placement Engineer (Systems Dept.)}\\
+  During a gap year from university, I worked a year-long placement at Leonardo to further develop radar simulation products. Given full responsibility and ownership of accelerating software released to external customers quarterly; my work involved reading academic papers on computer graphics and algorithm implementation for \textbf{real-time GPU processing}. To implement solutions, the NVIDA \textbf{CUDA} API was chosen and challenges overcome in quickly learning this new technology. I ultimately left the team with a well-received report containing  general techniques for hardware acceleration along with several examples where these were applied to existing products.
+}
+\entry
+  {\scalebox{.8}[1.0]{June--Sept. 2017}}
+  {Leonardo UK Ltd.}
+  {Crewe Road, Edinburgh}
+  {\jobtitle{Summer Placement Engineer (Systems Dept.)}\\
+ I returned to Leonardo as a summer student, continuing development of my radar imaging simulation. Working as part of a wider team focused on exploiting hardware acceleration to speed up compute-intensive simulation, I was introduced to various methods which accelerate code execution in both \textbf{C\#/.NET} framework and using NVIDIA's \textbf{CUDA} C API. Responsibilities included attending weekly progress meetings, keeping an appropriate lab book and delivering presentations on completed work.
+ Ultimately, my code-base saw a 10 times speedup. Simulations which would have been run overnight can now complete in a lunch break.
+}
+\entry
+  {\scalebox{.8}[1.0]{August 2015 --July.  2016}}
+  {Leonardo UK Ltd.}
+  {Crewe Road, Edinburgh}
+  {\jobtitle{Year in Industry Student (Systems Dept.)}\\
+ From high-school, I was selected for a single space on Leonardo's Systems Engineering Year in Industry programme. I was responsible for R\&D of software to simulate a specialised synthetic aperture radar ground imaging mode. My solution works by performing a ``virtual'' flight trial on \textbf{digital terrain} gathered from freely available \textbf{map data}.
+ Coming into a research-based project straight from school required a great deal of adjustment: I enrolled in a five-day company radar course; learned to write robust and reliable \textbf{C\#/.NET} software adhering to company standards and built tenacity in addition to recognition of my own limits and when to seek guidance.
+ Upon finishing the year, I was selected for several Year in Industry awards and was subsequently invited back to Leonardo the following summer.
+}
+
+
+%------------------------------------------------
+\end{entrylist}
+\hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
+\vspace{-0.55cm}
 \section{Education}
-  \vspace{-0.2cm}
+  \vspace{0.2cm}
 \begin{entrylist}
 %------------------------------------------------
 \entry
-{\scalebox{.8}[1.0]{2016--June 2022}}
+{\scalebox{.8}[1.0]{Sept. 2016--June 2022}}
 {MEng, Electronic and Software Engineering}
 {University of Glasgow}
-{\textbf{GPA: 18.6/22.0}\\
-\small{I graduated from the James-Watt School of Engineering \textbf{with Honours of the First Class}. My degree includes a practical mix of electronic design and computing science theory and application. In this, I have found embedded and real-time programming especially interesting, completing my final-year-project }}
-%------------------------------------------------
+{
+I graduated from the James-Watt School of Engineering \textbf{with Honours of the First Class}. My degree includes a practical mix of electronic design with computing science theory and application. Throughout my studies, I have gravitated more towards the software engineering elements of the degree and especially programming embedded systems in C/C++. I also got involved with societies during my time at Glasgow. For GUSTS - Glasgow University Sustainable Technology Society and served as Projects manager in the 2020-2021 committee group and helped organise events promoting sustainable engineering projects on campus. I have also been a member of the surf club and enjoyed trips out with friends catching swells. 
+\vspace{0.1cm}
+
+
+%\entry{}{\hspace*{-2.3cm}Selected Achieved Grades}{}{
+
+Selected achieved grades tabulated below; achieved an \textbf{overall GPA of 18.6/22.0}:
+
+\vspace{0.2cm}
+
+\centering
+\begin{tabular}{L{4.9cm}C{1cm}C{1cm} C{0.0cm}L{4.6cm}C{1cm}C{1cm}}
+\toprule
+\textbf{Course} & \textbf{Grade} & \textbf{Year} & & \textbf{Course} & \textbf{Grade} & \textbf{Year}\\ \midrule
+ \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5041P}{Individual Project (Final Year)}             & A2         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4053}{Digital Signal Processing}  & A3             & 4\textsuperscript{th}  \\ \midrule
+ \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5220}{Real-time Embedded Programming}            & A2         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4173}{Renewable \& Sustainable Energy}        & A4             & 4\textsuperscript{th}\\ \midrule
+ \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5026}{Design Special Topic}             & A4         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3020}{Digital Circuit Design} & A1 & 3\textsuperscript{rd} \\ \midrule
+ \href{https://www.gla.ac.uk/coursecatalogue/course/?code=COMPSCI4021}{Functional Programming}             & A2             & 4\textsuperscript{th}         & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3003}{Electronic System Design} & A2 & 3\textsuperscript{rd}\\ \bottomrule
+\end{tabular}
+
+}
+\vspace{0.2cm}
+
+
 \entry
 {\scalebox{.8}[1.0]{2014--2016}}
 {Open University Modules}
 {Open University (Online)}
-{\small{Throughout my final year of high-school and my Year-In-Industry gap-year, I enrolled in computing modules taught at the Open University. I studied \href{https://www.open.ac.uk/courses/modules/m250}{M250 - Object-oriented Java programming} and \href{https://www.open.ac.uk/courses/modules/m269}{M269 - Algorithmns, data structures and computability}, achieving a Pass grade for both.}}
+{Throughout my final year of high-school and my Year in Industry placement, I studied remotely for  \href{https://www.open.ac.uk/courses/modules/m250}{M250 - Object-oriented Java programming} and \href{https://www.open.ac.uk/courses/modules/m269}{M269 - Algorithmns, data structures and computability}, achieving a Pass grade for both. These modules have served as my first qualification in the computing/software engineering world and helped fuel my early interest in the subject.   }
 %------------------------------------------------
-\entry
-{\scalebox{.8}[1.0]{2014--2016}}
-{First-line Management, Level 6}
-{Perth College UHI}
-{\small{Throughout my final year of high-school and my Year-In-Industry gap-year, I enrolled in computing modules taught at the Open University. I studied \href{https://www.open.ac.uk/courses/modules/m250}{M250 - Object-oriented Java programming} and \href{https://www.open.ac.uk/courses/modules/m269}{M269 - Algorithmns, data structures and computability}, achieving a Pass grade for both.}}
+
+%\entry
+%{\scalebox{.8}[1.0]{2015--2016}}
+%{First-line Management Diploma}
+%{Perth College UHI}
+%{As a student on the Year-in-industry programme, I was invited to enrol in a \href{https://www.perth.uhi.ac.uk/courses/chartered-management-institute-first-line-management}{a level 6 management diploma} at Perth College. This taught fundamentals of business etiquette, teamworking skills via a selection of assignments delivered via online learning. I achieved a Pass grade along side my work at Leonardo UK Ltd..}
 %------------------------------------------------
-%------------------------------------------------
+\vspace{0.2cm}
+
 \entry
 {\scalebox{.8}[1.0]{2010--2015}}
 {Peebles High School}
 {Springwood Rd, Peebles}
-
 %------------------------------------------------
 
 \end{entrylist}
-%----------------------------------------------------------------------------------------
-% WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\section{Employment History}
-  \vspace{-0.2cm}
-\begin{entrylist}
-%------------------------------------------------
-\entry
-  {\scalebox{.8}[1.0]{June 2021--Now}}
-  {DynAikon Ltd.}
-  {Entirely Online}
-  {\jobtitle{Software Developer \& Research Assistant}\\
-  En la actualidad soy encargado del Departamento de Diseño y Diagramación, con personal a cargo variable (entre 1 y 3 personas) y trato fluido con los clientes. Ofrecemos soluciones para el diseño de imagen de particulares y pequeñas empresas; diagramación de catálogos, folletos y libros; así como la edición de videos para publicidad y eventos. Trabajando con tecnologías de Adobe Creative Suit (Illustrator/Photoshop/InDesign/Premier Pro/AfterEffects).}
-%------------------------------------------ ------
-\vspace{-0.3cm}
-\entry
-  {\scalebox{.8}[1.0]{2013--2014}}
-  {Imagination Technologies}
-  {Kings Langley, Watford}
-  {\jobtitle{Vision \& AI Research Intern}\\
-  Oony es una Start Up que ofrece una aplicación de Acumulación de Ofertas. Ahí adquirí una amplia batería de conocimientos en \textbf{mantenimiento de servidores} y \textbf{desarrollo de aplicaciones WEB}, tanto back-end como front-end. Específicamente la localización de errores en los servidores (control de Logs y APIs de monitoreo), su solución (desarrollo de mejoras y actualizaciones de software), el desarrollo de la aplicación WEB que concentra una gran cantidad de productos (Scalability); la obtención y el análisis del contenido (Parsing, Data Mining, Classification).\\
-  \textbf{Proyectos desarrollados:}
-  \begin{itemize}\small{
-    \item Parseo de HTML, XML, CSV, JSON (por medio de la biblioteca Scrapy).
-    \item Categorización del contenido a partir de sus descripciones\\
-    (utilizando las bibliotecas NLTK).
-    \item Paralelización de consultas a APIs, optimizando tiempos de respuesta\\
-    (manejo de Threads).
-    \item Desarrollo de APIs para back-end.}
-k  \end{itemize}}
-%------------------------------------------------
-\end{entrylist}
-%----------------------------------------------------------------------------------------
-% AWARDS SECTION
-%----------------------------------------------------------------------------------------
+\end{minipage}
+
+\hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
+\vspace{-0.4cm}
 \section{Open-Sourced Software Projects}
-  \vspace{-0.2cm}
+  \vspace{0.2cm}
+I am passionate about open sourced software. Many of my own contributions to software in the public domain are available on my personal GitHub site and through DynAikon's public git repository. Below are some example projects I am proud of.
+\vspace{0.1cm}
 \begin{entrylist}
-%------------------------------------------------
 \entry
-{\scalebox{.8}[1.0]{2007--2008}}
-{Olimpíadas Matemáticas Argentinas}
-{}
-{Alumno aprobado en el Certamen Nacional de las 24º y 25º Olimpíadas Matemáticas Argentinas}
+{June 2021--Present}
+{DynAikonTrap - AI Camera Trap for Biodiversity Monitoring}
+{Python/C}
+{
+Codebase: \href{https://gitlab.dynaikon.com/dynaikontrap}{\texttt{gitlab.dynaikon.com/dynaikontrap}} Our published paper: \href{https://doi.org/10.1016/j.ecoinf.2022.101657}{\texttt{doi.org/10.1016/j.ecoinf.2022.101657}}\\
+Documentation: \href{https://dynaikon.com/trap-docs/}{\texttt{dynaikon.com/trap-docs/}} My final-year dissertation: \href{}{\texttt{}}
+}
+\entry
+{Jan.--May 2022}
+{Signapse - AI Sign Language Teacher}
+{C++/C}
+{
+A simple event-driven video processing app using a convolutional image classifier to teach hand signs via a user interface. \\
+Codebase: \href{https://github.com/albanjoseph/Signapse}{\texttt{github.com/albanjoseph/Signapse}} Wiki: \href{https://github.com/albanjoseph/Signapse/wiki}{\texttt{github.com/albanjoseph/Signapse/wiki}} \\
+Documentation: \href{https://albanjoseph.github.io/Signapse/html/annotated.html}{\texttt{albanjoseph.github.io/Signapse}}
+}
+\entry
+{Jan.--May 2022}
+{AudiClean - Event-driven Audio Filtering Library}
+{C++/C}
+{
+Extension of the SoX audio library, provides implementation of novel audio filtering mechanisms and a command-line interface.\\
+Codebase: \href{https://github.com/rossGardiner/AudiClean}{\texttt{github.com/rossGardiner/AudiClean}} Documentation: \href{https://rossgardiner.github.io/AudiClean/html/annotated.html}{\texttt{rossgardiner.github.io/AudiClean}}
+} 
+\entry
+{Sept. 2019--May 2020}
+{NextSteps - Sports-ground Test Equipment Driver}
+{Java}
+{
+Codebase: \href{https://github.com/rossGardiner/next-steps}{\texttt{github.com/rossGardiner/next-steps}}
+
+
+}
 %------------------------------------------------
 \end{entrylist}
-  \vspace{-0.2cm}
+  \vspace{0.2cm}
 %----------------------------------------------------------------------------------------
 % INTERESTS SECTION
 %----------------------------------------------------------------------------------------3
-\section{intereses}
-  \vspace{-0.2cm}
-\textbf{Back-end.} Sectores de análisis de datos y categorización (Natural Language Processing, Machine Learning); optimización de procesos; mantenimiento de servidores y bases de datos; seguridad informática.
+\end{minipage}
+\hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
+\section{Personal Interests}
+  \vspace{0.2cm}
+In my free time I am keen on exploring the great outdoors. My favourite past-times are \textbf{camping, climbing and surfing} when I get the chance. During time off, you can find me exploring the west coast with my girlfriend in our camper van and throughout much of this summer I have been enjoying Scotland's diverse range of \textbf{rock climbing} venues. I also love training for climbing and bouldering in my local gym and take a keen interest in fitness and nutrition.
+
+\end{minipage}
 %----------------------------------------------------------------------------------------
+\blfootnote{How's my work? I'd be thrilled to receive any feedback on my CV you may have: \href{https://tbana5tiy5p.typeform.com/to/LwEMHwuO}{complete my survey}.}
+\blfootnote{This CV has been created and edited using \LaTeX, the style sheet used is provided under GPLv3 on \href{https://github.com/rossGardiner/RossGardiner-CV}{my GitHub}.}
 \end{document}
