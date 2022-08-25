@@ -60,7 +60,7 @@
 \newfontfamily\bodyfontit{Roboto-LightItalic}[Path=fonts/]
 \newfontfamily\thinfont{Roboto-Thin}[Path=fonts/]
 \newfontfamily\thinfontit{Roboto-ThinItalic}[Path=fonts/]
-\newfontfamily\headingfont{RobotoCondensed-Bold}[Path=fonts/]
+\newfontfamily\headingfont{Roboto-Bold}[Path=fonts/]
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor, Path = fonts/]{Roboto-Light}
