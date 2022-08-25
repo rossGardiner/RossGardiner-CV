@@ -108,19 +108,32 @@
   \def\lastupdatedtext{Última Actualización el}
 \else
   \setdefaultlanguage[variant=british]{english}
-  \def\lastupdatedtext{Last Updated on}
+  \def\lastupdatedtext{Updated:}
 \fi
 
 \setlength{\TPHorizModule}{0.01\paperwidth}
 \setlength{\TPVertModule}{0.01\paperwidth}
 
+%place last-updated text
 \newcommand{\lastupdated}{ 
-  \begin{textblock}{10}(11.3, 0.05)
+  \begin{textblock}{10}(11.5, 1.45)
     \raggedleft
     \fontsize{8pt}{10pt}\color{date}\thinfont 
     \lastupdatedtext{} \today
   \end{textblock}}
-
+  
+%remove footnote number
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+%remove footnote indent
+\renewcommand\@makefntext[1]{%
+\setlength\parindent{1em}%
+\noindent
+\mbox{\@thefnmark.~}{#1}}
 %----------------------------------------------------------------------------------------
 % Structure %
 %----------------------------------------------------------------------------------------
@@ -168,20 +181,35 @@
 % List environment %
 %----------------------------------------------------------------------------------------
 
-\setlength{\tabcolsep}{0pt}
+%\setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \vspace{0.1cm}
+  \nobreak
+  %\begin{tabular*}
+  %{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
-  \end{tabular*}
+  %\end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
+
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
-    \textbf{#2}%
+  \begin{minipage}[b]{1\textwidth}
+    \textbf{#2} -- #1%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
-  }\\}
+    #4%
+  \end{minipage}
+
+  \\
+  }
+  
+%\newcommand{\entry}[4]{%
+%  #1&\parbox[t]{11.8cm}{%
+%    \textbf{#2}%
+%    \hfill%
+%    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+%    #4\vspace{\parsep}%
+%  }\\}
 
 %----------------------------------------------------------------------------------------
 % Side block %
@@ -194,7 +222,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{4.6}(1, 1.87)
+  \begin{textblock}{4.6}(0.5, 1.87)
   \begin{flushleft}
   \obeycr
 }{%
@@ -202,6 +230,9 @@
   \end{flushleft}
   \end{textblock}
   \let\section\oldsection
+  \begin{tikzpicture}[remember picture,overlay]
+\draw[graduatepurple,line width=2mm](-0.5,0.15)--(-0.5,-30);
+\end{tikzpicture}
 }
 
 %----------------------------------------------------------------------------------------
@@ -210,8 +241,3 @@
 
 \RequirePackage[left=6.4cm,top=1cm,right=1cm,bottom=1cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
-\hypersetup{
-    pdftitle=CV/Resume \textbar{} Alejandro Pérez Londoño,
-    pdfauthor=Alejandro Pérez Londoño,
-    pdfsubject=CV/Resume%
-    }
