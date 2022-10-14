@@ -91,6 +91,11 @@
   \vspace{-2\parskip}
 }
 
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{soul}
+\setulcolor{graduatepurple}
+\setul{1pt}{.4pt}% 1pt below contents
+\newcommand{\linkrg}[2]{\href{#1}{\ul{#2}}}
 %----------------------------------------------------------------------------------------
 %	Last updated command %
 %----------------------------------------------------------------------------------------

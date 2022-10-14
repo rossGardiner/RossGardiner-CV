@@ -4,15 +4,15 @@
 \documentclass[]{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing. 
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{verbatim}
-\hypersetup{
-    pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
-    linkbordercolor=red,       % color of internal links
-    citebordercolor=green,     % color of links to bibliography
-    filebordercolor=magenta,   % color of file links
-    urlbordercolor=graduatepurple% color of external links
-}
+%\hypersetup{
+%    pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
+%    linkbordercolor=red,       % color of internal links
+%    citebordercolor=green,     % color of links to bibliography
+%    filebordercolor=magenta,   % color of file links
+%    urlbordercolor=graduatepurple% color of external links
+%}
 \usepackage{array}
 \usepackage{booktabs} 
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
@@ -30,7 +30,7 @@
 %----------------------------------------------------------------------------------------
 \begin{aside}
 \includegraphics[width=5cm]{g2-cropped}
-%
+\vspace{-0.3cm}
 \section{Contact}
 \vspace{0.1cm}Mobile: \texttt{+447719679958}
 ~
@@ -44,17 +44,18 @@ Orcid: \url{https://orcid.org/0000-0001-5633-1317}
 %
 
 \section{Programming Languages}
-Python, C++, C, Haskell, Java, C\#, \LaTeX, MATLAB, HTML/RST
+Python, C++, C, Haskell, Java, C\#, \LaTeX, MATLAB, HTML/CSS
 %
 \section{Recent Technologies}
 Linux, OpenCV, Tensorflow/Keras, NVIDIA~CUDA, MS .NET, Qt, Doxygen, Sphinx, PiCamera, Google~Test, Docker, Jenkins
 \section{Miscellaneous Skills}
 UK Driver's Licence, Video~and~Photo~Editing,
-Electronics~Design/Manufacture, Vehicle Repair, Woodwork 
+Electronics~Design/Manufacture, Vehicle Repair, Woodwork, Rock Climbing
+\vspace{-0.2}
 \section{Awards/Recognition}
-Year in Industry Contribution to the Business Awards, Scottish Winner (2016)
+Year in Industry Contribution to the Business Awards: Scottish Winner (2016),
 ~
-Year in industry IETF Future Industry Leaders Awards Runner up innovation prize (2016)
+Year in industry IETF Future Industry Leaders Awards: Innovation Prize (2016);
 ~
 Leonardo Employee Recognition Award (2019)
 \end{aside}
@@ -63,7 +64,7 @@ Leonardo Employee Recognition Award (2019)
 \section{About}
   \vspace{-0.4cm}
 
-Enthusiastic \textbf{Electronics and Software Engineering graduate} with some relevant experience. I have a keen interest in applications of machine learning for climate justice, medicine and/or ecological good. Currently seeking roles with positive impact on people and planet wherein a strong foundation in research work and software engineering may be applied.
+Enthusiastic \textbf{MEng Electronics and Software Engineering graduate} with some relevant experience. I have a keen interest in applications of machine learning for climate justice, medicine and/or ecological good. Currently seeking roles with positive impact on people and planet wherein a strong foundation in research work and software engineering may be applied.
   \vspace{-0.2cm}
 \section{Employment History}
   \vspace{-0.4cm}
@@ -74,9 +75,9 @@ Enthusiastic \textbf{Electronics and Software Engineering graduate} with some re
   {DynAikon Ltd.}
   {Entirely Online}
   {\jobtitle{Software Developer \& Research Assistant}\\
-  Presently, I am working as the project lead on our software package, \href{https://dynaikon.com/trap-docs/user-docs.html}{DynAikonTrap}. This is a fully open source (hardware and software) camera trap with AI capability and integration with our \href{https://service.fastcat-cloud.org/api/spec}{web API} for observation logging. Our design is currently novel, using video encoding artefacts and convolutional neural networks to detect animal presence in a live video feed. Inner workings are explained in our \href{https://www.sciencedirect.com/science/article/pii/S1574954122001066}{recently published paper}, of which I am a co-author. 
+  Presently, I am working as the project lead on our software package, \linkrg{https://dynaikon.com/trap/}{DynAikonTrap}. This is a fully open source camera trap with some AI capability and integration with our \linkrg{https://service.fastcat-cloud.org/api/spec}{web API} for observation logging. Our design is currently novel, using video encoding artefacts and convolutional neural networks to detect animal presence in a live video feed. The design is discussed in our \linkrg{https://www.sciencedirect.com/science/article/pii/S1574954122001066}{recently published paper}, of which I am a co-author. 
   \\
-  As project lead, I am involved not only in every aspect of code development but also with communication, product support and liaison with our funding consortium. I also produced my final-year MEng research project from work completed on DynAikonTrap: successfully halving the system power consumption, accelerating our CNN detectors via quantisation and adding AI capability to distinguish humans from animals. 
+  As project lead I am involved in every aspect of software development, communication, product support and liaison with our funding consortium. I also produced my final-year MEng \linkrg{https://gitlab.dynaikon.com/rossg/2190583_Gardiner_ENG5041P_Final_Year_Report/}{research project} from work completed on DynAikonTrap: successfully halving the system power consumption, accelerating our CNN detectors via weight quantisation and adding capability to distinguish humans from animals in video feed. 
   %Recently, I have been preparing for a workshop where I  introduce DynAikonTrap to a group of wildlife researchers at the Spanish National Research Council in Catalonia. We hope this will help the project gain traction and volunteers for the open source development effort.
   \\
   \textbf{Technologies currently in use: }
@@ -94,14 +95,14 @@ Enthusiastic \textbf{Electronics and Software Engineering graduate} with some re
   {Imagination Technologies}
   {Kings Langley, Watford}
   {\jobtitle{Vision \& AI Research Intern}\\
- I joined the Compiler Team as a Research Intern. My given task was to review metrics for quantifying neural network inference quality at different weight quantisation degrees. In particular, I looked at generative adversarial networks (GANs) and created a \textbf{Python} integration test running on a \textbf{Jenkins} server. I put these metrics to use as part of an existing fault checking pipeline for compiler releases. I learned to work in an \textbf{Agile} team, participating in regular stand-ups and produced detailed reports on chosen metrics from the available literature. 
+ I joined the Compiler Team as a Research Intern. My given task was to review image analysis metrics for quantifying neural network inference quality. In particular, I looked at images created by generative adversarial networks (GANs) and created an evaluatory \textbf{Python} integration test running on a \textbf{Jenkins} server. I put these metrics to use as part of an existing fault checking pipeline for compiler releases. I learned to work in an \textbf{Agile} team, participating in regular stand-ups and produced detailed reports on chosen metrics from the available literature. 
  }
 \entry
   {\scalebox{.8}[1.0]{Aug. 2018--June 2019}}
   {Leonardo UK Ltd.}
   {Crewe Road, Edinburgh}
   {\jobtitle{Undergrad Placement Engineer (Systems Dept.)}\\
-  During a gap year from university, I worked a year-long placement at Leonardo to further develop radar simulation products. Given full responsibility and ownership of accelerating software released to external customers quarterly; my work involved reading academic papers on computer graphics and algorithm implementation for \textbf{real-time GPU processing}. To implement solutions, the NVIDA \textbf{CUDA} API was chosen and challenges overcome in quickly learning this new technology. I ultimately left the team with a well-received report containing  general techniques for hardware acceleration along with several examples where these were applied to existing products.
+  During a gap year from university, I worked a year-long placement at Leonardo to further develop radar simulation products. Given full responsibility and ownership of accelerating software released to external customers quarterly; my work involved reading academic papers on computer graphics and algorithm implementation for real-time GPU processing. To implement solutions, the NVIDA CUDA API was chosen and challenges overcome in quickly learning this new technology. I ultimately left the team with a well-received report containing  general techniques for hardware acceleration along with several examples where these were applied to existing products.
 }
 \entry
   {\scalebox{.8}[1.0]{June--Sept. 2017}}
@@ -116,7 +117,7 @@ Enthusiastic \textbf{Electronics and Software Engineering graduate} with some re
   {Leonardo UK Ltd.}
   {Crewe Road, Edinburgh}
   {\jobtitle{Year in Industry Student (Systems Dept.)}\\
- From high-school, I was selected for a single space on Leonardo's Systems Engineering Year in Industry programme. I was responsible for R\&D of software to simulate a specialised synthetic aperture radar ground imaging mode. My solution works by performing a ``virtual'' flight trial on \textbf{digital terrain} gathered from freely available \textbf{map data}.
+ From high-school, I was selected for a single space on Leonardo's Systems Engineering Year in Industry programme. I was responsible for R\&D of software to simulate a specialised synthetic aperture radar ground imaging mode. My solution works by performing a ``virtual'' flight trial on digital terrain gathered from freely available map data.
  Coming into a research-based project straight from school required a great deal of adjustment: I enrolled in a five-day company radar course; learned to write robust and reliable \textbf{C\#/.NET} software adhering to company standards and built tenacity in addition to recognition of my own limits and when to seek guidance.
  Upon finishing the year, I was selected for several Year in Industry awards and was subsequently invited back to Leonardo the following summer.
 }
@@ -125,7 +126,7 @@ Enthusiastic \textbf{Electronics and Software Engineering graduate} with some re
 %------------------------------------------------
 \end{entrylist}
 \hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
-\vspace{-0.55cm}
+\vspace{-0.6cm}
 \section{Education}
   \vspace{0.2cm}
 \begin{entrylist}
@@ -135,7 +136,8 @@ Enthusiastic \textbf{Electronics and Software Engineering graduate} with some re
 {MEng, Electronic and Software Engineering}
 {University of Glasgow}
 {
-I graduated from the James-Watt School of Engineering \textbf{with Honours of the First Class}. My degree includes a practical mix of electronic design with computing science theory and application. Throughout my studies, I have gravitated more towards the software engineering elements of the degree and especially programming embedded systems in C/C++. I also got involved with societies during my time at Glasgow. For GUSTS - Glasgow University Sustainable Technology Society and served as Projects manager in the 2020-2021 committee group and helped organise events promoting sustainable engineering projects on campus. I have also been a member of the surf club and enjoyed trips out with friends catching swells. 
+I graduated from the James-Watt School of Engineering \textbf{with Honours of the First Class}. My degree includes a practical mix of electronic design with computing science theory and application.
+I have enjoyed working on team projects throughout my studies. For two such projects in my final year, I took on the role of lead programmer. This involved managing our team's overall direction and ownership of event-driven software in \textbf{C/C++} . As part of GUSTS - Glasgow University Sustainable Technology Society I served as Projects Manager in the 2020-2021 committee group and helped organise events promoting sustainable engineering projects on campus. I've also been a keen member of the University Surf Club, which has been a lot of fun. Finally, I enjoyed serving as a lab demonstrator for a \textbf{Python} web app development course, where I learned teaching methods and solidified my own knowledge.
 \vspace{0.1cm}
 
 
@@ -149,10 +151,10 @@ Selected achieved grades tabulated below; achieved an \textbf{overall GPA of 18.
 \begin{tabular}{L{4.9cm}C{1cm}C{1cm} C{0.0cm}L{4.6cm}C{1cm}C{1cm}}
 \toprule
 \textbf{Course} & \textbf{Grade} & \textbf{Year} & & \textbf{Course} & \textbf{Grade} & \textbf{Year}\\ \midrule
- \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5041P}{Individual Project (Final Year)}             & A2         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4053}{Digital Signal Processing}  & A3             & 4\textsuperscript{th}  \\ \midrule
- \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5220}{Real-time Embedded Programming}            & A2         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4173}{Renewable \& Sustainable Energy}        & A4             & 4\textsuperscript{th}\\ \midrule
- \href{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5026}{Design Special Topic}             & A4         & 5\textsuperscript{th}       & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3020}{Digital Circuit Design} & A1 & 3\textsuperscript{rd} \\ \midrule
- \href{https://www.gla.ac.uk/coursecatalogue/course/?code=COMPSCI4021}{Functional Programming}             & A2             & 4\textsuperscript{th}         & & \href{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3003}{Electronic System Design} & A2 & 3\textsuperscript{rd}\\ \bottomrule
+ \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5041P}{Individual Project (Final Year)}             & A2         & 5\textsuperscript{th}       & & \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4053}{Digital Signal Processing}  & A3             & 4\textsuperscript{th}  \\ \midrule
+ \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5220}{Real-time Embedded Programming}            & A2         & 5\textsuperscript{th}       & & \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG4173}{Renewable \& Sustainable Energy}        & A4             & 4\textsuperscript{th}\\ \midrule
+ \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=ENG5026}{Design Special Topic}             & A4         & 5\textsuperscript{th}       & & \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3020}{Digital Circuit Design} & A1 & 3\textsuperscript{rd} \\ \midrule
+ \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=COMPSCI4021}{Functional Programming}             & A2             & 4\textsuperscript{th}         & & \linkrg{https://www.gla.ac.uk/coursecatalogue/course/?code=UESTC3003}{Electronic System Design} & A2 & 3\textsuperscript{rd}\\ \bottomrule
 \end{tabular}
 
 }
@@ -163,14 +165,14 @@ Selected achieved grades tabulated below; achieved an \textbf{overall GPA of 18.
 {\scalebox{.8}[1.0]{2014--2016}}
 {Open University Modules}
 {Open University (Online)}
-{Throughout my final year of high-school and my Year in Industry placement, I studied remotely for  \href{https://www.open.ac.uk/courses/modules/m250}{M250 - Object-oriented Java programming} and \href{https://www.open.ac.uk/courses/modules/m269}{M269 - Algorithmns, data structures and computability}, achieving a Pass grade for both. These modules have served as my first qualification in the computing/software engineering world and helped fuel my early interest in the subject.   }
+{Throughout my final year of high-school and my Year in Industry placement, I studied remotely for  \linkrg{https://www.open.ac.uk/courses/modules/m250}{M250 - Object-oriented Java programming} and \linkrg{https://www.open.ac.uk/courses/modules/m269}{M269 - Algorithmns, data structures and computability}, achieving a Pass grade for both. These modules have served as my first qualification in the computing/software engineering world and helped fuel my early interest in the subject.   }
 %------------------------------------------------
 
 %\entry
 %{\scalebox{.8}[1.0]{2015--2016}}
 %{First-line Management Diploma}
 %{Perth College UHI}
-%{As a student on the Year-in-industry programme, I was invited to enrol in a \href{https://www.perth.uhi.ac.uk/courses/chartered-management-institute-first-line-management}{a level 6 management diploma} at Perth College. This taught fundamentals of business etiquette, teamworking skills via a selection of assignments delivered via online learning. I achieved a Pass grade along side my work at Leonardo UK Ltd..}
+%{As a student on the Year-in-industry programme, I was invited to enrol in a \linkrg{https://www.perth.uhi.ac.uk/courses/chartered-management-institute-first-line-management}{a level 6 management diploma} at Perth College. This taught fundamentals of business etiquette, teamworking skills via a selection of assignments delivered via online learning. I achieved a Pass grade along side my work at Leonardo UK Ltd..}
 %------------------------------------------------
 \vspace{0.2cm}
 
@@ -186,7 +188,7 @@ Selected achieved grades tabulated below; achieved an \textbf{overall GPA of 18.
 \hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
 \vspace{-0.4cm}
 \section{Open-Sourced Software Projects}
-  \vspace{0.2cm}
+  \vspace{0.1cm}
 I am passionate about open sourced software. Many of my own contributions to software in the public domain are available on my personal GitHub site and through DynAikon's public git repository. Below are some example projects I am proud of.
 \vspace{0.1cm}
 \begin{entrylist}
@@ -195,32 +197,35 @@ I am passionate about open sourced software. Many of my own contributions to sof
 {DynAikonTrap - AI Camera Trap for Biodiversity Monitoring}
 {Python/C}
 {
-Codebase: \href{https://gitlab.dynaikon.com/dynaikontrap}{\texttt{gitlab.dynaikon.com/dynaikontrap}} Our published paper: \href{https://doi.org/10.1016/j.ecoinf.2022.101657}{\texttt{doi.org/10.1016/j.ecoinf.2022.101657}}\\
-Documentation: \href{https://dynaikon.com/trap-docs/}{\texttt{dynaikon.com/trap-docs/}} My final-year dissertation: \href{}{\texttt{}}
+Codebase: \linkrg{https://gitlab.dynaikon.com/dynaikontrap}{\texttt{gitlab.dynaikon.com/dynaikontrap}} Our published paper: \linkrg{https://doi.org/10.1016/j.ecoinf.2022.101657}{\texttt{doi.org/10.1016/j.ecoinf.2022.101657}}\\
+Documentation: \linkrg{https://dynaikon.com/trap-docs/}{\texttt{dynaikon.com/trap-docs/}} \\My final-year dissertation: \linkrg{https://gitlab.dynaikon.com/rossg/2190583_Gardiner_ENG5041P_Final_Year_Report/}{\texttt{gitlab.dynaikon.com/rossg/2190583\_Gardiner\_ENG5041P\_Final\_Year\_Report/}}
 }
+\vspace{0.1cm}
 \entry
 {Jan.--May 2022}
 {Signapse - AI Sign Language Teacher}
 {C++/C}
 {
 A simple event-driven video processing app using a convolutional image classifier to teach hand signs via a user interface. \\
-Codebase: \href{https://github.com/albanjoseph/Signapse}{\texttt{github.com/albanjoseph/Signapse}} Wiki: \href{https://github.com/albanjoseph/Signapse/wiki}{\texttt{github.com/albanjoseph/Signapse/wiki}} \\
-Documentation: \href{https://albanjoseph.github.io/Signapse/html/annotated.html}{\texttt{albanjoseph.github.io/Signapse}}
+Codebase: \linkrg{https://github.com/albanjoseph/Signapse}{\texttt{github.com/albanjoseph/Signapse}} Wiki: \linkrg{https://github.com/albanjoseph/Signapse/wiki}{\texttt{github.com/albanjoseph/Signapse/wiki}} \\
+Documentation: \linkrg{https://albanjoseph.github.io/Signapse/html/annotated.html}{\texttt{albanjoseph.github.io/Signapse}}
 }
+\vspace{0.1cm}
 \entry
 {Jan.--May 2022}
 {AudiClean - Event-driven Audio Filtering Library}
 {C++/C}
 {
 Extension of the SoX audio library, provides implementation of novel audio filtering mechanisms and a command-line interface.\\
-Codebase: \href{https://github.com/rossGardiner/AudiClean}{\texttt{github.com/rossGardiner/AudiClean}} Documentation: \href{https://rossgardiner.github.io/AudiClean/html/annotated.html}{\texttt{rossgardiner.github.io/AudiClean}}
+Codebase: \linkrg{https://github.com/rossGardiner/AudiClean}{\texttt{github.com/rossGardiner/AudiClean}} Documentation: \linkrg{https://rossgardiner.github.io/AudiClean/html/annotated.html}{\texttt{rossgardiner.github.io/AudiClean}}
 } 
+\vspace{0.1cm}
 \entry
 {Sept. 2019--May 2020}
 {NextSteps - Sports-ground Test Equipment Driver}
 {Java}
 {
-Codebase: \href{https://github.com/rossGardiner/next-steps}{\texttt{github.com/rossGardiner/next-steps}}
+Codebase: \linkrg{https://github.com/rossGardiner/next-steps}{\texttt{github.com/rossGardiner/next-steps}}
 
 
 }
@@ -231,13 +236,21 @@ Codebase: \href{https://github.com/rossGardiner/next-steps}{\texttt{github.com/r
 % INTERESTS SECTION
 %----------------------------------------------------------------------------------------3
 \end{minipage}
-\hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
+\vspace{0.0}\hspace*{-5.5cm}\begin{minipage}[b]{1.4\textwidth}
 \section{Personal Interests}
-  \vspace{0.2cm}
+  \vspace{0.05cm}
 In my free time I am keen on exploring the great outdoors. My favourite past-times are \textbf{camping, climbing and surfing} when I get the chance. During time off, you can find me exploring the west coast with my girlfriend in our camper van and throughout much of this summer I have been enjoying Scotland's diverse range of \textbf{rock climbing} venues. I also love training for climbing and bouldering in my local gym and take a keen interest in fitness and nutrition.
 
 \end{minipage}
 %----------------------------------------------------------------------------------------
-\blfootnote{How's my work? I'd be thrilled to receive any feedback on my CV you may have: \href{https://tbana5tiy5p.typeform.com/to/LwEMHwuO}{complete my survey}.}
-\blfootnote{This CV has been created and edited using \LaTeX, the style sheet used is provided under GPLv3 on \href{https://github.com/rossGardiner/RossGardiner-CV}{my GitHub}.}
+
+\vspace{-0.1cm}\hspace{1cm}\begin{minipage}[b]{\textwidth}
+\hline
+\vspace{0.05cm}
+\footnotesize{
+How's my work? I'd be thrilled to receive any feedback on my CV you may have: \linkrg{https://tbana5tiy5p.typeform.com/to/LwEMHwuO}{complete my survey}.\\
+This CV has been created and edited using \LaTeX, the style sheet used is provided under GPLv3 on \linkrg{https://github.com/rossGardiner/RossGardiner-CV}{my GitHub}.}
+\end{minipage}
+%\blfootnote{How's my work? I'd be thrilled to receive any feedback on my CV you may have: \linkrg{https://tbana5tiy5p.typeform.com/to/LwEMHwuO}{complete my survey}.}
+%\blfootnote{This CV has been created and edited using \LaTeX, the style sheet used is provided under GPLv3 on \linkrg{https://github.com/rossGardiner/RossGardiner-CV}{my GitHub}.}
 \end{document}
