@@ -32,6 +32,7 @@
 \definecolor{graduatepurple}{HTML}{7C2C53}
 \definecolor{conferencegreen}{HTML}{6E8968}
 
+
 \definecolor{date}{HTML}{A4A4A4}
 
 \ifdefined\@cv@print
@@ -44,7 +45,7 @@
   \colorlet{fillheader}{white}
   \colorlet{header}{lightgreen}
 \else
-  \colorlet{fillheader}{conferencegreen}
+  \colorlet{fillheader}{lightgray}
   \colorlet{header}{white}
 \fi
 \colorlet{textcolor}{gray}
@@ -94,7 +95,8 @@
 
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{soul}
-\setulcolor{conferencegreen}
+%\setulcolor{conferencegreen}
+\setulcolor{lightgray}
 \setul{1pt}{.4pt}% 1pt below contents
 \newcommand{\linkrg}[2]{\href{#1}{\ul{#2}}}
 %----------------------------------------------------------------------------------------
@@ -237,7 +239,8 @@
   \end{textblock}
   \let\section\oldsection
   \begin{tikzpicture}[remember picture,overlay]
-\draw[conferencegreen,line width=2mm](-0.5,0.15)--(-0.5,-30);
+%\draw[conferencegreen,line width=2mm](-0.5,0.15)--(-0.5,-30);
+\draw[lightgray,line width=2mm](-0.5,0.15)--(-0.5,-30);
 \end{tikzpicture}
 }
 
