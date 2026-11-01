@@ -124,7 +124,7 @@
 
 %place last-updated text
 \newcommand{\lastupdated}{ 
-  \begin{textblock}{10}(11.5, 1.45)
+  \begin{textblock}{10}(10.75, 1.45)
     \raggedleft
     \fontsize{8pt}{10pt}\color{date}\thinfont 
     \lastupdatedtext{} \today
